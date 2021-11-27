@@ -1,0 +1,31 @@
+<div class="contenedor">
+  <h1>{{actualizarServicio ? 'Actualizar Servicio' : 'Agregar Servicio'}}</h1>
+  <form [formGroup]="formServicios">
+    <div class="mb-3">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+    </div>
+    <div class="mb-3">
+      <label for="inputDescipcion">Descripcion</label>
+      <input type="text" class="form-control" id="inputDescripcion" formControlName="descripcion">
+    </div>
+    <div class="mb-3">
+      <label for="inputCategoria">Categoria</label>
+      <input type="text" class="form-control" id="inputCategoria" formControlName="categoria">
+    </div>
+    <div class="mb-3">
+      <label for="inputDuracion">Duracion</label>
+      <input type="number" class="form-control" id="inputDuracion" formControlName="duracion">
+    </div>
+    <div class="mb-3">
+      <label for="inputPrecio">Precio</label>
+      <input type="number" class="form-control" id="inputPrecio" formControlName="precio">
+    </div>
+    <div class="mb-3">
+      <label for="inputEmpleado">Empleado</label>
+      <input type="text" class="form-control" id="inputEmpleado" formControlName="empleado">
+    </div>
+    <button type="submit" class="btn btn-primary boton" [disabled]="formServicios.invalid" (click)="servicioAgregar()" *ngIf='!actualizarServicio'>Enviar</button>
+    <button type="submit" class="btn btn-primary boton" [disabled]="formServicios.invalid" (click)="servicioActualizar()" *ngIf='actualizarServicio'>Actualizar</button>
+  </form>
+</div>

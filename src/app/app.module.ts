@@ -7,6 +7,12 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { TablaServiciosComponent } from './component/tabla-servicios/tabla-servicios.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
+import { ServiciosComponent } from './component/servicios/servicios.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiciosService } from './services/servicios/servicios.service';
+import { ErrorComponent } from './component/error/error.component';
+import { FormularioServicioComponent } from './component/formulario-servicio/formulario-servicio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,18 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
     HeaderComponent,
     FooterComponent,
     TablaServiciosComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ServiciosComponent,
+    ErrorComponent,
+    FormularioServicioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ServiciosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

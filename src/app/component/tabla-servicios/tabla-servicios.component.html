@@ -1,1 +1,29 @@
-<p>tabla-servicios works!</p>
+
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Duracion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Empresa</th>
+      <th scope="col">Empleado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let service of servicios; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{service.nombre}}</td>
+      <td>{{service.descripcion}}</td>
+      <td>{{service.categoria}}</td>
+      <td>{{service.duracion}}</td>
+      <td>{{service.precio}}</td>
+      <td>{{service.empresa}}</td>
+      <td>{{service.empleado}}</td>
+      <td><button type="button" class="btn btn-danger" (click)="deleteService(service.id)">Eliminar</button></td>
+      <td><button type="button" class="btn btn-light" routerLink='/formulario-servicio' (click)='actualizarServicio(service)'>Modificar</button></td>
+    </tr>
+  </tbody>
+</table>

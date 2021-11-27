@@ -1,0 +1,8 @@
+<div class="contenedor">
+  <div class="alert alert-success" role="alert" *ngIf="showAlert">
+    Servicio eliminada correctamente!
+  </div>
+  <h1>Tabla servicios</h1>
+  <app-tabla-servicios (mostrarAlerta)='mostrarAlerta($event)'></app-tabla-servicios>
+  <button type="button" class="btn btn-secondary regresar" routerLink="/formulario-servicio">Agregar</button>
+</div>

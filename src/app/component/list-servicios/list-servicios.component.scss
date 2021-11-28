@@ -1,0 +1,46 @@
+.contenedor{
+  width: 90%;
+  margin: 50px auto;
+  background-color: rgb(234, 226, 183);
+}
+
+.color{
+  background-color: rgb(234, 226, 183);
+}
+
+.precio:before {
+  content: '$';
+}
+
+.precio:after{
+  content: ' COP';
+}
+
+.precio{
+  margin-top: 10px;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(214, 40, 40);
+}
+
+.empleado:before{
+  content: "Atendido por: ";
+}
+
+.duracion::after{
+  content: " mins aprox";
+}
+
+.boton{
+  background-color: rgb(134, 177, 93);
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: small;
+}
+
+.align{
+  margin-top: -10px;
+}
+.align-name-price{
+  margin-top: 5px;
+}

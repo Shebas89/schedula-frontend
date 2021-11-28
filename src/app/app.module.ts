@@ -13,6 +13,7 @@ import { ServiciosService } from './services/servicios/servicios.service';
 import { ErrorComponent } from './component/error/error.component';
 import { FormularioServicioComponent } from './component/formulario-servicio/formulario-servicio.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListServiciosComponent } from './component/list-servicios/list-servicios.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     ServiciosComponent,
     ErrorComponent,
-    FormularioServicioComponent
+    FormularioServicioComponent,
+    ListServiciosComponent
   ],
   imports: [
     BrowserModule,

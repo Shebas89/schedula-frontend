@@ -1,0 +1,30 @@
+<h1></h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let service of servicios; let i = index">
+    <div class="row contenedor">
+      <div class="form-group col-md-9" style="margin: 5px; margin-top: 10px;">
+        <h4>{{service.nombre}}</h4>
+      </div>
+      <div class="form-group col-md-2 text-center" style="margin: 5px;">
+        <p class="precio">{{service.precio}}</p>
+      </div>
+      <div class="form-group col-md-9" style="margin: 5px;">
+        <label for="exampleFormControlTextarea1" style="font-weight: bold;margin-bottom: 8px;">Descripcion</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly placeholder="{{service.descripcion}}"></textarea>
+      </div>
+      <div class="form-group col-md-2 text-center align" style="margin: 5px;">
+        <div class="form-group">
+          <button type="button" class="btn btn-danger" (click)="deleteService(service.id)" style="margin-bottom: 15px; margin-right: 5px;">X</button>
+          <button type="button" class="btn boton" style="margin-bottom: 15px; margin-right: 5px;">Reservar</button>
+          <button type="button" class="btn btn-secondary" routerLink='/formulario-servicio' (click)='actualizarServicio(service)' style="margin-bottom: 15px;">A</button>
+        </div>
+        <div class="form-goup"  style="margin: 5px;">
+          <p class="duracion">{{service.duracion}}</p>
+          <p class="empleado">{{service.empleado}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+      </div>
+    </div>
+  </li>
+</ul>

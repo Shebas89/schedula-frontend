@@ -36,4 +36,9 @@ export class ServiciosService {
     const url = `${environment.apiUrl}/inactivarServicio/${id}`
     return this.http.put(url,{}).toPromise();
   }
+
+  public obtenerCategoriasServicios(): Promise<any>{
+    const url = `${environment.apiUrl}/obtenerCategoriasServicio`;
+    return this.http.get(url).toPromise();
+  }
 }

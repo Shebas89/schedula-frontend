@@ -1,0 +1,15 @@
+<div class="contenedor">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation" *ngFor="let categoria of categorias">
+      <button class="nav-link boton" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false" (click)="setCategoryFather(categoria);">{{categoria.categoria_servicio}}</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <app-list-servicios [categoria_padre]="categoria_padre"></app-list-servicios>
+    </div>
+    <div class="tab-pane fade show " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <app-list-servicios [categoria_padre]="categoria_padre"></app-list-servicios>
+    </div>
+  </div>
+</div>

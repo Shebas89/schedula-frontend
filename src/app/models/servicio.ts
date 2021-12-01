@@ -9,3 +9,7 @@ export interface ServicioModel {
   empresa: string,
   empleado: string
 }
+
+export interface CategoryServiceModel {
+  categoria_servicio: string
+}

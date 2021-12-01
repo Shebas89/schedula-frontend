@@ -1,8 +1,8 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { async } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { ServicioModel } from 'src/app/models/servicio';
+import { CategoryServiceModel, ServicioModel } from 'src/app/models/servicio';
 import { ServiciosService } from 'src/app/services/servicios/servicios.service';
 
 @Component({
@@ -12,15 +12,18 @@ import { ServiciosService } from 'src/app/services/servicios/servicios.service';
 })
 export class ListServiciosComponent implements OnInit {
 
+  @Input() categoria_padre: CategoryServiceModel | null = null;
   public servicios: ServicioModel[] = [];
+  public categoria_pad: String | undefined = "";
   @Output() mostrarAlerta = new EventEmitter();
 
   constructor( private servicesServicios: ServiciosService, private router: Router ) { }
 
   async ngOnInit(): Promise<void> {    
     this.servicios = await this.getServices();
-    console.log(this.servicios)
-
+    console.log(this.servicios);
+    console.log(this.categoria_padre);
+    this.categoria_pad = this.categoria_padre?.categoria_servicio;
   }
 
   public async getServices(): Promise<any>{
@@ -28,7 +31,7 @@ export class ListServiciosComponent implements OnInit {
       const response = await this.servicesServicios.obtenerServicios();
       return response.datos;
     }catch(error){
-      this.router.navigate(['/error'])
+      this.router.navigate(['/error']);
     }
   }
 
@@ -47,4 +50,11 @@ export class ListServiciosComponent implements OnInit {
     this.router.navigate(['/formulario-servicio']);
   }
 
+  public getServicesFilter(){
+    if ( !this.categoria_padre ){
+      return this.servicios;
+    }
+
+    return this.servicios.filter((servicio) => this.categoria_padre?.categoria_servicio === servicio.categoria);
+  }
 }

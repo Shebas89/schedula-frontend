@@ -5,12 +5,13 @@ import { FormularioServicioComponent } from './component/formulario-servicio/for
 import { ListServiciosComponent } from './component/list-servicios/list-servicios.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { ServiciosComponent } from './component/servicios/servicios.component';
+import { TabServiciosComponent } from './component/tab-servicios/tab-servicios.component';
 
 const routes: Routes = [
   { path:'servicios', component: ServiciosComponent},
   { path:'error', component: ErrorComponent },
   { path:'formulario-servicio', component: FormularioServicioComponent },
-  { path:'list-servicios', component:ListServiciosComponent },
+  { path:'tab-servicios', component: TabServiciosComponent },
   { path:'**', component: NotFoundComponent}
 ];
 

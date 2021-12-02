@@ -3,13 +3,13 @@
   margin: 50px auto;
 }
 
-.boton:focus:enabled{
+.boton.active{
   background-color: rgb(134, 177, 93) !important;
   color: rgb(255, 255, 255);
 }
-.boton:focus-visible{
-  background-color: rgb(134, 177, 93) !important;
-  color: rgb(255, 255, 255);
+
+.boton.active:hover{
+  background-color: rgb(101, 136, 69) !important
 }
 
 .boton{

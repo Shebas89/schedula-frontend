@@ -3,7 +3,15 @@
   margin: 50px auto;
 }
 
+.boton:focus:enabled{
+  background-color: rgb(134, 177, 93) !important;
+  color: rgb(255, 255, 255);
+}
+.boton:focus-visible{
+  background-color: rgb(134, 177, 93) !important;
+  color: rgb(255, 255, 255);
+}
+
 .boton{
-  // background-color: rgb(134, 177, 93);
   color: black;
 }

@@ -1,11 +1,9 @@
-.footer{
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  text-align: center;
-}
-.text{
-  margin-top: 5px;
-  margin-bottom: 5px;
+.contenedor{
+    position: static;
+    
+    text-align: center;
+    font-family: 'Playfair Display';
+    color: #FCF1F1;
+    background-color: #212529;
+    font-size: 13px;
 }

@@ -15,12 +15,19 @@ import { FormularioServicioComponent } from './components/formulario-servicio/fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListServiciosComponent } from './components/list-servicios/list-servicios.component';
 import { TabServiciosComponent } from './components/tab-servicios/tab-servicios.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { UsuariosService } from './services/usuarios/usuarios.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    LoginComponent,
+    RegistroComponent,
+    InicioComponent,
     TablaServiciosComponent,
     NotFoundComponent,
     ServiciosComponent,
@@ -35,7 +42,7 @@ import { TabServiciosComponent } from './components/tab-servicios/tab-servicios.
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [ServiciosService],
+  providers: [UsuariosService, ServiciosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

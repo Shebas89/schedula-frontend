@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { UsuariosService } from './services/usuarios/usuarios.service';
+import { HeaderLoginComponent } from './components/header-login/header-login.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UsuariosService } from './services/usuarios/usuarios.service';
     ErrorComponent,
     FormularioServicioComponent,
     ListServiciosComponent,
-    TabServiciosComponent
+    TabServiciosComponent,
+    HeaderLoginComponent
   ],
   imports: [
     BrowserModule,

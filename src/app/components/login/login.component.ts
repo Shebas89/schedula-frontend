@@ -27,16 +27,20 @@ export class LoginComponent implements OnInit {
   //Metodo para crear grupo de inputs del formulario registro
   private buildUsuarios(){
     this.formaUsuarios = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email, Validators.maxLength(30)]],
-      password: ['', [Validators.required, Validators.maxLength(10)]]
+      email: ['', [Validators.requiredTrue, Validators.email, Validators.maxLength(30)]],
+      password: ['', [Validators.requiredTrue, Validators.maxLength(10)]]
     });
   }
 
 
   //Metodo para validar usuario: llamar peticion HTTP
   public validarUsuario(){
+    console.log("test pase");
+    console.log(this.formaUsuarios.value);
     this.usuariosService.validarUsuario(this.formaUsuarios.value).then(response =>{
       //Backend retorna mensaje correct e id, incorrect o not found
+      alert(response);
+      console.log(response);
       if(response.message == 'correct'){
         sessionStorage.setItem('idUsuario', (response.id).toString());
         this.router.navigate(['/']);

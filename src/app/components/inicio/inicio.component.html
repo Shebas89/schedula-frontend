@@ -1,31 +1,41 @@
-    <section>
-        <div class="subtitulo1">
-            <h2>Reserva online tu próxima cita</h2>
+<div class="contenedor">
+    <h4 class="titulo">Schedula.com!!! Agenda tu proxima cita.</h4>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-
-        <div class="imagenes">
-            <a routerLink="login">
-                <img style="float: left" src="../../../assets/BeautySalon.jpg" alt="Centros de belleza"/>
-            </a>
-            <a routerLink="/">
-                <img style="float: left; margin-left: 50px;" src="../../../assets/Dentist.jpg" alt="Clínicas odontológicas"/>
-            </a>
-            <a routerLink="/">
-                <img style="float: left; margin-left: 50px;" src="../../../assets/Veterinary.jpg" alt="Clínicas veterinarias"/>
-            </a>
+        <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="../../../assets/BeautySalon.jpg" class="d-block w-50 imagen" alt="Salon de belleza">
+            <div class="carousel-caption d-none d-md-block">
+            <h5 class="blanco">Salones de Belleza & Barberias</h5>
+            <p class="blanco">Encuentra los diferentes salones de bellezas o barberias.</p>
+            </div>
         </div>
-
-        <div class="titulos">
-            <p style="margin-left: 200px;">Centros de belleza, estética y SPA</p>
-            <p style="margin-left: 50px;">Clínicas odontológicas</p>
-            <p style="margin-left: 50px;">Clínicas veterinarias</p>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="../../../assets/Dentist.jpg" class="d-block w-50 imagen" alt="Odontologia">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>Clinicas Odontologicas</h5>
+            <p>Encuentra una gran variedad de clinicas Odontologicas.</p>
+            </div>
         </div>
-   
-    </section>
-   
-    <section>
-        <div class="subtitulo2">
-            <h2>Un servicio perfecto para ti</h2>
+        <div class="carousel-item">
+            <img src="../../../assets/Veterinary.jpg" class="d-block w-50 imagen" alt="Veterinarias">
+            <div class="carousel-caption d-none d-md-block">
+            <h5 class="blanco">Clinicas Veterinarias</h5>
+            <p class="blanco">Encuentra diferentes clinicas Veterinarias para tu mascota.</p>
+            </div>
         </div>
-
-    </section>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
